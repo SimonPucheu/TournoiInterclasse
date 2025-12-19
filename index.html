@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournoi Interclasse</title>
+</head>
+
+<body>
+    <script>
+        const languages = ['en', 'fr'];
+        var language = navigator.language || navigator.userLanguage;
+        language = language.split('-')[0];
+        if (languages.findIndex((l) => l == language) != -1) window.location.replace('./' + language + '/index.html');
+        else window.location.replace('./en/index.html');
+    </script>
+    <noscript>
+        <ul>
+            <li>
+                <a href="./en/index.html">en</a>
+            </li>
+            <li>
+                <a href="./fr/index.html">fr</a>
+            </li>
+        </ul>
+    </noscript>
+</body>
+
+</html>
